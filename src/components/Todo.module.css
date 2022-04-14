@@ -1,0 +1,35 @@
+button:hover{
+    background-color:coral;    
+}
+.date{
+    position: relative;
+    top:200px;
+    right:130px;
+}
+.entry{
+    position:relative;
+    top:120px;
+    left:20px;
+}
+.btn1{
+    position:relative;
+    top:120px;
+    right:40px;
+}
+.list{
+    display:flex;
+    justify-content: center;
+    position: relative;
+    top:250px;
+}
+.main{
+    background-color: aqua;
+}
+.date1{
+    position:relative;
+    top:203px;
+    right:30px;
+}
+.table{
+    background-color: yellow;
+}
