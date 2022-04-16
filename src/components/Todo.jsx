@@ -5,6 +5,7 @@ const Todo=()=>{
     const[list,setList]=useState([]);
     const[date,setDate]=useState('');
     const[date1,setDate1]=useState('');
+    const[show,setShow]=useState('')
 
     const changeHandler=(event)=>{
         const value=event.target.value;
@@ -30,7 +31,15 @@ const Todo=()=>{
     }
 
     const clickHandler2=()=>{
-    setList("");
+    if(date<date1){
+    setShow("submitted on time");
+    }
+    else if(date>date1){
+        setShow("submitted after due date")
+    }
+    else{
+        setShow("submitted");
+    }
     }
 
     const listitems=list.map((item,index)=>{
@@ -87,6 +96,8 @@ const Todo=()=>{
         <ol className={styles.list}>
             <li>{listitems}</li>
         </ol>
+
+        <p className={styles.msg}>{show}</p>
 
         </>
     )
