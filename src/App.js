@@ -1,11 +1,18 @@
 // import logo from './logo.svg';
 import './App.css';
-import Home from './pages/Home';
+import {
+  Routes,
+  Route,
+} from "react-router-dom";
+import Todo from './components/Todo';
 
 function App() {
   return (
     <div className="App">
-    <Home/>
+        <Routes>
+      <Route path="/home" element={<Todo />}>
+      </Route>
+    </Routes>
     </div>
   );
 }
